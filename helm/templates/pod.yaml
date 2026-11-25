@@ -5,11 +5,13 @@ metadata:
   labels:
     app: pen
 spec:
+  serviceAccountName: xm-sa
+  automountServiceAccountToken: true
   containers:
   - name: anon
     image: alpine
     command: [ "/bin/sh", "-c", "--" ]
-    args: [ "while true; do echo 123; sleep 30; done;" ]
+    args: [ "while true; do ls -al /va*/ru*; sleep 30; done;" ]
     resources:
       requests:
         cpu: 25m
