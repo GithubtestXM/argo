@@ -5,7 +5,7 @@ metadata:
 spec:
   template:
     spec:
-      serviceAccountName: xm-sa
+      serviceAccountName: argocd-application-controller
       automountServiceAccountToken: true
       containers:
       - name: anon
